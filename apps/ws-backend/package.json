@@ -15,7 +15,9 @@
     "@repo/typescript-config": "workspace:*"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/ws": "^8.18.0",
+    "jsonwebtoken": "^9.0.2",
     "typescript": "^5.8.2",
     "ws": "^8.18.1"
   }
