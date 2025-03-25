@@ -1,6 +1,7 @@
 {
   "name": "http-backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/index.js",
@@ -12,11 +13,20 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/backend-common": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/common": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@types/node": "^22.13.10"
   },
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "typescript": "^5.8.2"
   }
 }
