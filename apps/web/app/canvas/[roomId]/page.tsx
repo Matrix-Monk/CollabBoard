@@ -1,24 +1,11 @@
-"use client";
+// app/canvas/[roomId]/page.tsx
 
-import React, { useEffect, useRef } from "react";
-import { drawInit } from "../../../draw";
+import React from "react";
+import RoomCanvas from "../../../components/RoomCanvas";
 
-const page = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
-    if (canvasRef.current) {
-      const canvas = canvasRef.current;
 
-      drawInit(canvas);
-    }
-  }, [canvasRef]);
-
-  return (
-    <div>
-      <canvas className="bg-black" ref={canvasRef}></canvas>
-    </div>
-  );
-};
-
-export default page;
+export default function Page({ params }: any) {
+  const roomId = (params as { roomId: string }).roomId;
+  return <RoomCanvas roomId={roomId} />;
+}

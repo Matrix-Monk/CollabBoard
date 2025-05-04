@@ -3,7 +3,6 @@ import {
   Pencil,
   Share2,
   Users2,
-  Layers,
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
@@ -28,7 +27,7 @@ export default function Home() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
-                href="/whiteboard"
+                href="/canvas"
                 className="rounded-full bg-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 flex items-center gap-2"
               >
                 Start Drawing <ArrowRight className="h-4 w-4" />
