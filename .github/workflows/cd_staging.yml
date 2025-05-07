@@ -24,9 +24,9 @@ jobs:
             npm install -g pnpm
             pnpm install
             pnpm run build
-            pm2 restart fe-sever
-            pm2 restart http-sever
-            pm2 restart ws-sever
+            pm2 restart http-server
+            pm2 restart web
+            pm2 restart ws-backend
             EOF
 
 
