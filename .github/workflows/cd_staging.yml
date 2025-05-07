@@ -16,6 +16,12 @@ jobs:
         run: |
           ssh -i ~/ssh_key -o StrictHostKeyChecking=no ubuntu@13.51.252.133 \
           "cd CollabBoard/ && git pull origin main && \
-           export PATH=/root/.nvm/versions/node/v22.13.1/bin:\$PATH && \
+           export PATH=/root/.nvm/versions/node/v22.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin && \
            npm install -g pnpm && pnpm install && pnpm run build && \
            pm2 restart fe-sever && pm2 restart http-sever && pm2 restart ws-sever"
+
+
+
+
+
+         
