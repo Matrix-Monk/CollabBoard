@@ -1,11 +1,6 @@
-// app/canvas/[roomId]/page.tsx
-
-import React from "react";
 import RoomCanvas from "../../../components/RoomCanvas";
 
-
-
-export default function Page({ params }: any) {
-  const roomId = (params as { roomId: string }).roomId;
+export default async function Page({ params }: { params: { roomId: string } }) {
+  const roomId = (await params).roomId;
   return <RoomCanvas roomId={roomId} />;
 }
